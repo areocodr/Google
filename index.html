@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="/css/output.css" />
     <title>Google</title>
   </head>
-  <body>
+  <body class="text-sm bg-white text-[#1f1f1f] font-arial font-normal">
     <!-- header -->
-    <div class="flex justify-end items-center text-sm text-gray-700 p-2">
+    <div class="flex justify-end items-center text-xs text-gray-700 p-2">
       <!-- Gmail/Images -->
       <div class="flex justify-center items-center gap-2 ml-5">
         <a
@@ -161,12 +161,12 @@
         <!-- buttons -->
         <div class="flex justify-center items-center-safe max-w-xs mx-auto">
           <button
-            class="mr-3 bg-[#f8f9fa] border[#f8f9fa] text-[#3c4043] px-4 rounded-sm font-sans text-[14px] m-[11px_4px] py-4 h-9 min-w-13 text-center leading-[27px] cursor-pointer hover:bg-[#f8f9fa] hover:text-[#202124] hover:shadow-[0_1px_1px_rgba(0,0,0,0.1)] focus:border-1 focus:border-[#4285f4] focus:outline-none"
+            class="mr-3 bg-[#f8f9fa] border[#f8f9fa] text-[#3c4043] px-4 rounded-sm font-sans text-[14px] m-[11px_4px] h-9 min-w-13 text-center cursor-pointer hover:bg-[#f8f9fa] hover:text-[#202124] hover:shadow-[0_1px_1px_rgba(0,0,0,0.1)] focus:border-1 focus:border-[#4285f4] focus:outline-none"
           >
             Google Search
           </button>
           <button
-            class="mr-3 bg-[#f8f9fa] border[#f8f9fa] text-[#3c4043] px-4 rounded-sm font-sans text-[14px] m-[11px_4px] py-4 h-9 min-w-13 text-center leading-[27px] cursor-pointer hover:bg-[#f8f9fa] hover:text-[#202124] hover:shadow-[0_1px_1px_rgba(0,0,0,0.1)] focus:border-1 focus:border-[#4285f4] focus:outline-none"
+            class="mr-3 bg-[#f8f9fa] border[#f8f9fa] text-[#3c4043] px-4 rounded-sm font-sans text-[14px] m-[11px_4px] h-9 min-w-13 text-center cursor-pointer hover:bg-[#f8f9fa] hover:text-[#202124] hover:shadow-[0_1px_1px_rgba(0,0,0,0.1)] focus:border-1 focus:border-[#4285f4] focus:outline-none"
           >
             I'm Feeling Lucky
           </button>
@@ -176,7 +176,7 @@
 
     <!-- footer -->
     <div
-      class="absolute bottom-0 w-full shrink-0 bg-[rgb(242,242,242)] text-gray-600 text-sm"
+      class="absolute bottom-0 w-full shrink-0 bg-[rgb(242,242,242)] text-sm"
     >
       <div
         class="flex flex-wrap justify-between py-[15px] px-[30px] border-b border-b-[#dadce0] text-md text-[#1f1f1f]"
@@ -184,27 +184,29 @@
         Nigeria
       </div>
       <div
-        class="flex flex-wrap lg:flex-nowrap lg:max-w-full justify-evenly px-5 py-2.5"
+        class="flex flex-wrap xl:flex-nowrap xl:max-w-full justify-evenly xl:justify-between px-5 py-2.5 xl:px-5 xl:py-0"
       >
-        <div class="flex order-1 justify-start min-w-[30%]">
+        <div class="flex order-1 justify-start min-w-[30%] text-nowrap">
           <a href="#" class="block p-3">About</a>
           <a href="#" class="block p-3">Advertising</a>
           <a href="#" class="block p-3">Business</a>
           <a href="#" class="block p-3">How Search Works</a>
         </div>
         <div
-          class="flex order-0 sm:order-0 lg:order-2 w-full min-w-[30%] justify-center"
+          class="flex order-0 sm:order-0 xl:order-2 sm:max-xl:w-full xl:min-w-[30%] justify-between p-3"
         >
-          <span class="w-5 px-1"
-            ><img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"
-              class=""
-              alt=""
-              data-csiid="xC8aaMv-MIjOhbIPgOyWgQ0_11"
-              data-atf="4"
-              data-iml="1746546633079"
-          /></span>
-          Applying AI towards science and the environment
+          <div class="flex w-full min-w-[30%] justify-center items-center">
+            <span class="w-5 px-1"
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"
+                class=""
+                alt=""
+                data-csiid="xC8aaMv-MIjOhbIPgOyWgQ0_11"
+                data-atf="4"
+                data-iml="1746546633079"
+            /></span>
+            Applying AI towards science and the environment
+          </div>
         </div>
         <div class="flex order-3 justify-end min-w-[30%]">
           <a href="#" class="block p-3">Privacy</a>

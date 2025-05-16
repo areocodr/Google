@@ -13,6 +13,7 @@
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-white: #fff;
     --spacing: 0.25rem;
     --container-xs: 20rem;
     --text-xs: 0.75rem;
@@ -21,9 +22,12 @@
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
     --radius-sm: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-arial: "Arial", sans-serif;
   }
 }
 @layer base {
@@ -201,8 +205,8 @@
     @media (width >= 64rem) {
       max-width: 64rem;
     }
-    @media (width >= 80rem) {
-      max-width: 80rem;
+    @media (width >= 75rem) {
+      max-width: 75rem;
     }
     @media (width >= 96rem) {
       max-width: 96rem;
@@ -360,6 +364,9 @@
   .bg-\[rgb\(242\,242\,242\)\] {
     background-color: rgb(242,242,242);
   }
+  .bg-white {
+    background-color: var(--color-white);
+  }
   .fill-\[\#444746\] {
     fill: #444746;
   }
@@ -387,9 +394,6 @@
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
   }
-  .py-4 {
-    padding-block: calc(var(--spacing) * 4);
-  }
   .py-\[15px\] {
     padding-block: 15px;
   }
@@ -398,6 +402,9 @@
   }
   .align-middle {
     vertical-align: middle;
+  }
+  .font-arial {
+    font-family: var(--font-arial);
   }
   .font-sans {
     font-family: var(--font-sans);
@@ -410,12 +417,19 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
   .text-\[14px\] {
     font-size: 14px;
   }
-  .leading-\[27px\] {
-    --tw-leading: 27px;
-    line-height: 27px;
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .text-nowrap {
+    text-wrap: nowrap;
   }
   .text-\[\#1f1f1f\] {
     color: #1f1f1f;
@@ -425,9 +439,6 @@
   }
   .text-gray-500 {
     color: var(--color-gray-500);
-  }
-  .text-gray-600 {
-    color: var(--color-gray-600);
   }
   .text-gray-700 {
     color: var(--color-gray-700);
@@ -529,40 +540,46 @@
       order: 0;
     }
   }
-  .md\:order-2 {
-    @media (width >= 48rem) {
+  .sm\:max-xl\:w-full {
+    @media (width >= 40rem) {
+      @media (width < 75rem) {
+        width: 100%;
+      }
+    }
+  }
+  .xl\:order-2 {
+    @media (width >= 75rem) {
       order: 2;
     }
   }
-  .md\:max-w-full {
-    @media (width >= 48rem) {
+  .xl\:max-w-full {
+    @media (width >= 75rem) {
       max-width: 100%;
     }
   }
-  .md\:flex-nowrap {
-    @media (width >= 48rem) {
+  .xl\:min-w-\[30\%\] {
+    @media (width >= 75rem) {
+      min-width: 30%;
+    }
+  }
+  .xl\:flex-nowrap {
+    @media (width >= 75rem) {
       flex-wrap: nowrap;
     }
   }
-  .md\:text-xs {
-    @media (width >= 48rem) {
-      font-size: var(--text-xs);
-      line-height: var(--tw-leading, var(--text-xs--line-height));
+  .xl\:justify-between {
+    @media (width >= 75rem) {
+      justify-content: space-between;
     }
   }
-  .lg\:order-2 {
-    @media (width >= 64rem) {
-      order: 2;
+  .xl\:px-5 {
+    @media (width >= 75rem) {
+      padding-inline: calc(var(--spacing) * 5);
     }
   }
-  .lg\:max-w-full {
-    @media (width >= 64rem) {
-      max-width: 100%;
-    }
-  }
-  .lg\:flex-nowrap {
-    @media (width >= 64rem) {
-      flex-wrap: nowrap;
+  .xl\:py-0 {
+    @media (width >= 75rem) {
+      padding-block: calc(var(--spacing) * 0);
     }
   }
 }
@@ -584,7 +601,7 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-leading {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
@@ -658,7 +675,7 @@
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
-      --tw-leading: initial;
+      --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;

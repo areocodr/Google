@@ -12,3 +12,10 @@
       "opsz" 48;
   }
 }
+
+@theme {
+  --breakpoint-xl: 75rem;
+}
+@theme {
+  --font-arial: "Arial", sans-serif;
+}
