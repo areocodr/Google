@@ -12,7 +12,7 @@
   </head>
   <body class="text-sm bg-white text-[#1f1f1f] font-arial font-normal">
     <!-- header -->
-    <div class="flex justify-end items-center text-xs text-gray-700 p-2">
+    <div class="flex justify-end items-center text-xs text-gray-700 p-1.5 h-15">
       <!-- Gmail/Images -->
       <div class="flex justify-center items-center gap-2 ml-5">
         <a
@@ -52,7 +52,7 @@
               height="24"
               width="24"
               style="border: none; display: none \9"
-            ></image>
+            />
           </svg>
         </a>
         <div class="relative flex justify-center items-center">
@@ -68,7 +68,7 @@
       </div>
     </div>
 
-    <!-- main -->
+    <!-- logo container -->
     <div class="flex flex-col justify-center items-center-safe">
       <!-- logo -->
       <div
@@ -104,12 +104,23 @@
           ></path>
         </svg>
       </div>
-      <!-- search bar & buttons -->
-      <div class="space-y-5">
-        <!-- search bar -->
-        <div
-          class="max-w-max grow flex border border-gray-200 rounded-full p-2 px-4 shadow text-xl"
-        >
+    </div>
+    <!-- search bar & buttons -->
+    <div class="p-5 max-h-40 shrink-0">
+      <form
+        action=""
+        method="get"
+        autocomplete="off"
+        class="form-example"
+        role="search"
+      >
+        <div class="relative my-0 mx-auto w-auto max-w-146 pt-1.5"></div>
+      </form>
+      <!-- search bar -->
+      <div
+        class="max-w-[584px] w-auto grow flex border border-gray-200 rounded-full pr-2 shadow-[0px_2px_8px_0px_rgba(60,64,67,0.25)] mx-auto text-xl z-3 relative min-h-11"
+      >
+        <div>
           <!-- search icon -->
           <div class="flex items-center justify-center mx-2 w-6 text-gray-500">
             <svg
@@ -157,20 +168,20 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- buttons -->
-        <div class="flex justify-center items-center-safe max-w-xs mx-auto">
-          <button
-            class="mr-3 bg-[#f8f9fa] border[#f8f9fa] text-[#3c4043] px-4 rounded-sm font-sans text-[14px] m-[11px_4px] h-9 min-w-13 text-center cursor-pointer hover:bg-[#f8f9fa] hover:text-[#202124] hover:shadow-[0_1px_1px_rgba(0,0,0,0.1)] focus:border-1 focus:border-[#4285f4] focus:outline-none"
-          >
-            Google Search
-          </button>
-          <button
-            class="mr-3 bg-[#f8f9fa] border[#f8f9fa] text-[#3c4043] px-4 rounded-sm font-sans text-[14px] m-[11px_4px] h-9 min-w-13 text-center cursor-pointer hover:bg-[#f8f9fa] hover:text-[#202124] hover:shadow-[0_1px_1px_rgba(0,0,0,0.1)] focus:border-1 focus:border-[#4285f4] focus:outline-none"
-          >
-            I'm Feeling Lucky
-          </button>
-        </div>
+      <!-- buttons -->
+      <div class="flex justify-center items-center-safe max-w-xs mx-auto">
+        <button
+          class="mr-3 bg-[#f8f9fa] border[#f8f9fa] text-[#3c4043] px-4 rounded-sm font-sans text-[14px] m-[11px_4px] h-9 min-w-13 text-center cursor-pointer hover:bg-[#f8f9fa] hover:text-[#202124] hover:shadow-[0_1px_1px_rgba(0,0,0,0.1)] focus:border-1 focus:border-[#4285f4] focus:outline-none"
+        >
+          Google Search
+        </button>
+        <button
+          class="mr-3 bg-[#f8f9fa] border[#f8f9fa] text-[#3c4043] px-4 rounded-sm font-sans text-[14px] m-[11px_4px] h-9 min-w-13 text-center cursor-pointer hover:bg-[#f8f9fa] hover:text-[#202124] hover:shadow-[0_1px_1px_rgba(0,0,0,0.1)] focus:border-1 focus:border-[#4285f4] focus:outline-none"
+        >
+          I'm Feeling Lucky
+        </button>
       </div>
     </div>
 
@@ -186,7 +197,9 @@
       <div
         class="flex flex-wrap xl:flex-nowrap xl:max-w-full justify-evenly xl:justify-between px-5 xl:px-5 xl:py-0"
       >
-        <div class="flex order-1 justify-start min-w-[30%] text-nowrap">
+        <div
+          class="flex order-1 justify-start items-center min-w-[30%] text-nowrap"
+        >
           <a href="#" class="block p-3">About</a>
           <a href="#" class="block p-3">Advertising</a>
           <a href="#" class="block p-3">Business</a>
@@ -211,7 +224,7 @@
             </div>
           </div>
         </div>
-        <div class="flex order-3 justify-end min-w-[30%]">
+        <div class="flex order-3 justify-end items-center min-w-[30%]">
           <a href="#" class="block p-3">Privacy</a>
           <a href="#" class="block p-3">Terms</a>
           <a href="#" class="block p-3">Settings</a>
