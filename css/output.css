@@ -14,6 +14,7 @@
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-800: oklch(27.8% 0.033 256.848);
+    --color-gray-900: oklch(21% 0.034 264.665);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-xs: 20rem;
@@ -392,6 +393,9 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-\[\#f8f9fa\] {
+    border-color: #f8f9fa;
+  }
   .border-gray-200 {
     border-color: var(--color-gray-200);
   }
@@ -400,6 +404,9 @@
   }
   .border-b-\[\#dadce0\] {
     border-bottom-color: #dadce0;
+  }
+  .bg-\[\#f2f2f2\] {
+    background-color: #f2f2f2;
   }
   .bg-\[\#f8f9fa\] {
     background-color: #f8f9fa;
@@ -675,6 +682,17 @@
       padding-block: calc(var(--spacing) * 0);
     }
   }
+  .dark\:border-b {
+    @media (prefers-color-scheme: dark) {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 1px;
+    }
+  }
+  .dark\:border-\[\#1f1f1f\] {
+    @media (prefers-color-scheme: dark) {
+      border-color: #1f1f1f;
+    }
+  }
   .dark\:border-gray-700 {
     @media (prefers-color-scheme: dark) {
       border-color: var(--color-gray-700);
@@ -683,6 +701,11 @@
   .dark\:bg-\[\#1f1f1f\] {
     @media (prefers-color-scheme: dark) {
       background-color: #1f1f1f;
+    }
+  }
+  .dark\:bg-gray-900 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-gray-900);
     }
   }
   .dark\:fill-\[\#e8eaed\] {
@@ -700,6 +723,11 @@
       color: var(--color-gray-200);
     }
   }
+  .dark\:text-gray-400 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-gray-400);
+    }
+  }
   .dark\:text-white {
     @media (prefers-color-scheme: dark) {
       color: var(--color-white);
@@ -709,6 +737,34 @@
     @media (prefers-color-scheme: dark) {
       &::placeholder {
         color: var(--color-gray-400);
+      }
+    }
+  }
+  .dark\:hover\:bg-gray-700 {
+    @media (prefers-color-scheme: dark) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-gray-700);
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-gray-100 {
+    @media (prefers-color-scheme: dark) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-gray-100);
+        }
+      }
+    }
+  }
+  .dark\:hover\:shadow-\[0_1px_1px_rgba\(259\,259\,259\,0\.1\)\] {
+    @media (prefers-color-scheme: dark) {
+      &:hover {
+        @media (hover: hover) {
+          --tw-shadow: 0 1px 1px var(--tw-shadow-color, rgba(259,259,259,0.1));
+          box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+        }
       }
     }
   }
